@@ -1,12 +1,15 @@
 package day3;
 
+import com.github.javafaker.Faker;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.Locale;
 import java.util.Properties;
 
 public class Generic {
@@ -109,6 +112,30 @@ public class Generic {
     public static void selectBYIndex( WebElement element, int index){
         Select select = new Select(element);
         select.selectByIndex(index);
+    }
+
+    public static void assertText(WebElement element, String expectedText){
+        Assert.assertEquals(element.getText(),expectedText,"Actual vs Excepted not match");
+    }
+
+    public static void assertTitle(WebDriver driver, String expectedText){
+        Assert.assertEquals(driver.getTitle(),expectedText,"Actual title  vs Excepted title not match");
+    }
+
+
+    public static String fullname(){
+        Faker faker = new Faker(new Locale("en-IND"));
+        String fn = faker.name().fullName();
+        return fn;
+
+    }
+
+
+    public static String emailsIds(){
+        Faker faker = new Faker(new Locale("en-IND"));
+        String fn = faker.name().fullName();
+        return fn.trim().replace(" ","").replace(".","")+"@testmail.com";
+
     }
 }
 

@@ -131,6 +131,30 @@ public class Generic {
     }
 
 
+    public static String firstName(){
+        Faker faker = new Faker(new Locale("en-IND"));
+        String fn = faker.name().firstName();
+        return fn;
+    }
+
+
+    public static String lastName(){
+        Faker faker = new Faker(new Locale("en-IND"));
+        String fn = faker.name().lastName();
+        return fn;
+    }
+
+
+
+
+    public static String programme(){
+        Faker faker = new Faker(new Locale("en-IND"));
+        String fn = faker.educator().course();
+        return fn;
+    }
+
+
+
     public static String emailsIds(){
         Faker faker = new Faker(new Locale("en-IND"));
         String fn = faker.name().fullName();

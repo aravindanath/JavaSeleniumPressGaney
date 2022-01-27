@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="classes">
+    <parameter name="browser" value="chrome">
+        <test verbose="2" preserve-order="true"
+              name="Automation suite 1">
+            <classes>
+                <class name="day5.SuiteTest01"/>
+
+                <class name="day5.SuiteTest02"/>
+
+                <class name="day5.SuiteTest03"/>
+
+
+            </classes>
+        </test>
+    </parameter>
+
+</suite>

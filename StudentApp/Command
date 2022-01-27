@@ -1,0 +1,6 @@
+java -jar rest.jar
+
+
+java -jar D:\\user\\project\\rest.jar
+
+java -Dserver.port=8888 -jar rest.jar
